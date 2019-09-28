@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="detail_movie.css">
+</head>
+<body>
+    <header>
+        <div class="main_header">
+            <div class="left_header">
+                <div class="margin" id="logo_web"><img src="https://www.themoviedb.org/assets/2/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" alt="The Movie Database (TMDb)" width="81" height="72">
+                </div> 
+                <div class="margin">MOVIES</div>  
+                <div class="margin">ABOUT US</div> 
+            </div>
+            <div class="right_header">
+                <div class="margin">EN</div>
+                <div class="margin">LOGIN</div>
+                <div class="margin">SIGN UP</div>
+            </div>
+        </div>
+        <div class="search_bar">
+                <input dir="auto" id="search_input" name="query" type="text" tabindex="0" autocorrect="off" autofill="off" autocomplete="off" spellcheck="false" placeholder="Search for a movie, tv show, person..." value="" data-role="autocomplete" class="k-input" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="search_v4_listbox" aria-autocomplete="list">
+        </div>
+    </header>
+    <main>
+        <div class="header_overview">
+            <div class="custom_bg">
+                <div class="single_column">
+                    <div id="img_poster">
+                        
+                    </div>
+                    <div class="detail_overview">
+                        <div class="title_movie">
+                            <span>
+                                <h2 id="title"></h2>
+                            </span>
+                            <span class ="release_year"></span>
+                        </div>
+                        <div class="info_overview">
+                            <h3>Overview</h3>
+                            <div class="overview">
+                                
+                            </div>
+                            <h3 class="featured">Featured Crew</h3>
+                            <ol class="people_no_image">
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_overiew">
+                <div class="more_detail">
+                        <div class="white_left">
+                            <div>
+                                <div class="top_billed_cast">
+                                    <h3>Top billed cast</h3>
+                                    <div>
+                                        <ol class="top_billed_cast_ol">
+
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="trailer">
+                                    <h3>Trailer</h3>
+                                    <div id="video_trailer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gray_right">
+                            <div>
+                                <div class="fact">
+                                    <p>
+                                        <div class="form">Status</div>
+                                        <div id="info_form_status"></div>
+                                    </p>
+                                    <p>
+                                        <div class="form">Release Information</div>
+                                        <div  id="info_form_release"></div>  
+                                    </p>
+                                    <p>
+                                        <div class="form">Original Language</div>
+                                        <div id="info_form_language"></div>
+                                    </p>
+                                    <p>
+                                        <div class="form">Runtime</div>
+                                        <div id="info_form_time"></div>
+                                    </p>
+                                    <p>
+                                        <div class="form">Budget</div>
+                                        <div id="info_form_budget"></div>
+                                    </p>
+                                    <p>
+                                        <div class="form">Revenue</div>  
+                                        <div id="info_form_revenue"></div> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="detail_movie.js"></script>
+</body>
+</html>
