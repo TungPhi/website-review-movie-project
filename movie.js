@@ -20,7 +20,7 @@ function insertDataTable(data) {
                <div class="item_wrapper">
                    <div class="info_wrapper">
                        <div class="image">
-                           <a href="https://www.themoviedb.org/movie/${id}">
+                           <a href="./detail_movie.html?id=${id}">
                                <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/${image}" alt="">
                            </a>
                        </div>

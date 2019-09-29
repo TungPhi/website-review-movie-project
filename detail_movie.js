@@ -1,17 +1,19 @@
-// function praseQuery (){
-//     let queryObject = {}
-//     let query = location.search;
-//     query = query.replace('?', '');
-//     query.split('&').forEach(couple => {
-//         let parseCouple = couple.split('=');
-//         queryObject[parseCouple[0]] = parseCouple[1];
-//     });
-//     return queryObject;
-// }
-// let queryObject = praseQuery();
+function praseQuery (){
+    let queryObject = {}
+    let query = location.search;
+    query = query.replace('?', '');
+    query.split('&').forEach(couple => {
+        let parseCouple = couple.split('=');
+        queryObject[parseCouple[0]] = parseCouple[1];
+    });
+    return queryObject;
+}
+let queryObject = praseQuery();
+
+
 Promise.all([
-    fetch('https://api.themoviedb.org/3/movie/118340/videos?api_key=55ed0db911e36ccf5bf3567c3559acd6&language=en-US'),
-    fetch('https://api.themoviedb.org/3/movie/118340?api_key=55ed0db911e36ccf5bf3567c3559acd6&append_to_response=credits&fbclid=IwAR3P7OKA_3m6OpxJkY3IWP2HgXgdswMUZTNBUOxR7fF1gMyyRoKJzr2CpxA')
+    fetch(`https://api.themoviedb.org/3/movie/${queryObject.id}/videos?api_key=55ed0db911e36ccf5bf3567c3559acd6&language=en-US`),
+    fetch(`https://api.themoviedb.org/3/movie/${queryObject.id}?api_key=55ed0db911e36ccf5bf3567c3559acd6&append_to_response=credits&fbclid=IwAR3P7OKA_3m6OpxJkY3IWP2HgXgdswMUZTNBUOxR7fF1gMyyRoKJzr2CpxA`)
     ]).then(values => {
         Promise.all([values[0].json(),values[1].json()]).then(data => {
             console.log(data);
@@ -58,7 +60,7 @@ function insertDataMovie(data) {
     for(let i = 0; i< 5; i++){    
         topBilledCast[0].innerHTML += `<li class="card">
             <img src="https://image.tmdb.org/t/p/w138_and_h175_face${data[1].credits.cast[i].profile_path}" />
-            <p>${data[1].credits.cast[i].name}</p>
+            <p style="font-family: 'Roboto', sans-serif; font-weight: 700">${data[1].credits.cast[i].name}</p>
             <p>${data[1].credits.cast[i].character}</p>
             </li>`
     }
@@ -72,3 +74,4 @@ function insertDataMovie(data) {
     document.getElementById('info_form_budget').innerText = `$${data[1].budget}`
     document.getElementById('info_form_revenue').innerText = `$${data[1].revenue}`
 }   
+// w1400_and_h450_face

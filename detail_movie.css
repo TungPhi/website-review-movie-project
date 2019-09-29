@@ -1,8 +1,10 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
 }
-header{
+/* header{
     position: fixed;
     top: 0;
     left: 0;
@@ -55,6 +57,93 @@ header{
     align-items: center;
     overflow: hidden;
     text-overflow: ellipsis;
+} */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #081c24;
+    width: 100%;
+    z-index: 999;
+    height: 118px;
+}
+header a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+header a:hover {
+    color: #01d277;
+}
+header>div.content {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    will-change: height;
+}
+header div.sub_media {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+div.sub_media {
+    width: 1000px;
+    margin: 0 auto;
+}
+header div.sub_media div.left {
+    max-width: 60%;
+}
+.left {
+    float: left;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    height: 72px;
+}
+header ul.primary {
+    text-transform: uppercase;
+}
+header div.left ul li {
+    margin-right: 30px;
+}
+
+header ul li.logo {
+    position: relative;
+    top: 3px;
+    width: 81px;
+    height: 72px;
+}
+header ul li.logo a {
+    display: block;
+}
+
+header div.sub_media div.right {
+    max-width: 40%;
+}
+header div.right li, header ul.right li {
+    margin-left: 30px;
+}
+.right {
+    float: right;
+}
+section.search {
+    width: 100%;
+    background-color: #fff;
+    height: 46px;
+    border-bottom: 1px solid #dedede;
+}
+#search_input{
+    border: none;
+    border-radius: 0;
+    padding: 0 30px;
+    height: 45px;
+    width: 98%;
+    outline: none;
+
 }
 main{
     padding-top: 158px;
@@ -98,11 +187,11 @@ main{
     align-content: center;
     padding-left: 40px;
 }
-.title_movie{
+.title_movie #title{
     width: 100%;
     margin-bottom: 30px;
-    display: flex;
-    font-size: 2.0em;
+    display: inline-block;
+    font-size: 2.em;
     line-height: 1.1em;
     font-weight: 700;
 }
@@ -261,4 +350,71 @@ div.info_overview.overview p{
     font-weight: 600;
     line-height: 1em;
     font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+#info_form_status, #info_form_release, #info_form_language, #info_form_time, #info_form_budget, #info_form_revenue{
+    font-weight: 300;
+    font-size: 0.9em;
+}
+/*Footer*/
+footer {
+    background-image: url(https://www.themoviedb.org/assets/2/v4/footers_v2/Dexter-8a2d3d9433580ebdc6238c83547a7bc4e3f86db51b2f2becbd50f08873f2784d.jpg), radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
+    height: 450px;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+footer nav{
+    width: 1000px;
+    margin: 0 auto;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav div {
+    margin-right: 20px;
+    min-width: 0;
+}
+footer nav div.link {
+    width: 230px;
+    text-align: right;
+    position: relative;
+    top: -36px;
+    right: 0;
+}
+footer nav h3 {
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+}
+h3 {
+    margin: 0 0 4px 0;
+}
+footer nav ul li {
+    line-height: 1.6em;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+footer nav ul li a {
+    font-size: 1.2em;
+}
+footer nav, footer nav a {
+    color: #fff;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
 }
