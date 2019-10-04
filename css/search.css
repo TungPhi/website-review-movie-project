@@ -1,0 +1,328 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* font-size: 1em; */
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #081c24;
+  width: 100%;
+  z-index: 999;
+  height: 118px;
+}
+header a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+header a:hover {
+  color: #01d277;
+}
+header>div.content {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  will-change: height;
+}
+header div.sub_media {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+div.sub_media {
+  width: 1000px;
+  margin: 0 auto;
+}
+header div.sub_media div.left {
+  max-width: 60%;
+}
+.left {
+  float: left;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  height: 72px;
+}
+header ul.primary {
+  text-transform: uppercase;
+}
+header div.left ul li {
+  margin-right: 30px;
+}
+
+header ul li.logo {
+  position: relative;
+  top: 3px;
+  width: 81px;
+  height: 72px;
+}
+header ul li.logo a {
+  display: block;
+}
+
+header div.sub_media div.right {
+  max-width: 40%;
+}
+header div.right li, header ul.right li {
+  margin-left: 30px;
+}
+.right {
+  float: right;
+}
+section.search {
+  width: 100%;
+  background-color: #fff;
+  height: 46px;
+  border-bottom: 1px solid #dedede;
+}
+#search_input{
+  font-size: 1em; 
+  border: none;
+  border-radius: 0;
+  padding: 0 30px;
+  height: 45px;
+  width: 98%;
+  outline: none;
+}
+
+ul{
+  list-style-type: none;
+  line-height: 1.4em;
+}
+/* end header */
+
+.media {
+  color: #000;
+  font-size: 1em;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 130px;
+}
+
+#search_result {
+  /* font-size: 1em;
+  color: #00d573; */
+  margin-bottom: 50px;
+}
+
+#movie_result {
+  padding: 0;
+  font-size: 1.7em;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.result_flex {
+  font-size: 1em;
+  color: #00d573;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item_poster_class {
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #000;
+  float: none;
+  margin-bottom: 0;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e3e3e3;
+  margin-top: 16px;
+}
+
+.image_content {
+  color: #000;
+  overflow: hidden;
+  height: 278px;
+  width: 185px;
+}
+
+#poster {
+  background: transparent;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  line-height: 0;
+  color: #000;
+}
+
+.info {
+  font-size: 1.2em;
+  color: #000;
+  height: 278px;
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  width: 815px;
+}
+
+.wrapper {
+  font-size: 1em;
+  color: #000;
+  display: flex;
+}
+.wrapper a {
+  width: 100%;
+  display: block;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+.wrapper span {
+  color: rgba(0,0,0,0.6);
+  line-height: 1.5em;
+}
+
+p.overview {
+  height: 100px;
+  word-wrap: break-word;
+  white-space: normal;
+  color: #4d4d4d;
+  font-size: 0.9em;
+  text-overflow: ellipsis;
+  line-height: 1.2em;
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 30px;
+  overflow: hidden;
+
+ 
+}
+.flex {
+  font-size: 1em;
+  color: #000;
+
+  /* margin-left: 10px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+p.view_more {
+  font-size: 1em;
+  width: 100%;
+  line-height: 1.2em;
+  color: #000;
+  border-top: 1px solid #e3e3e3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px 20px 20px 20px;
+}
+
+
+.title_result {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: transparent;
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  display: block;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
+.date_release {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(0,0,0,0.6);
+  line-height: 1em;
+}
+
+
+.result {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.2em;
+  white-space: nowrap;
+  background: transparent;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+/*Footer*/
+footer {
+  background-image: url(https://www.themoviedb.org/assets/2/v4/footers_v2/Minions-7626a4bff6ef7b6a7afa6a8641278e23b094d6a882da4129d9a8928d05b3b911.jpg), radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
+  height: 450px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+footer nav{
+  width: 1000px;
+  margin: 0 auto;
+  font-size: .9em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer nav div {
+  margin-right: 20px;
+  min-width: 0;
+}
+footer nav div.link {
+  width: 230px;
+  text-align: right;
+  position: relative;
+  top: -36px;
+  right: 0;
+}
+footer nav h3 {
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+}
+h3 {
+  margin: 0 0 4px 0;
+}
+footer nav ul li {
+  line-height: 1.6em;
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+footer nav ul li a {
+  font-size: 1.2em;
+}
+footer nav, footer nav a {
+  color: #fff;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  font-weight: normal;
+  cursor: pointer;
+}
